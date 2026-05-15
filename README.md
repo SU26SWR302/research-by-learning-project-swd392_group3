@@ -1,4 +1,4 @@
-````md
+
 # CrownDine - Hệ Thống Quản Lý Nhà Hàng Thông Minh
 
 **CrownDine** là một giải pháp quản lý nhà hàng hiện đại và toàn diện, được thiết kế nhằm tối ưu hóa quy trình vận hành từ đặt bàn, gọi món đến quản lý bếp và thanh toán. Tích hợp AI cùng công nghệ thời gian thực, CrownDine mang đến trải nghiệm liền mạch cho cả khách hàng lẫn nhân viên.
