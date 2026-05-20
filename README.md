@@ -94,10 +94,10 @@ Chatbot AI hỗ trợ phân tích dữ liệu vận hành, khung giờ cao đi�
 Dự án được phát hành theo giấy phép MIT License.
 
 ---
-
 # Liên Hệ
 
 - Author: Crowndine
 - Email: Crowdine@gmail.com
 - Website: Crowndine.com
+- Jira: [Crowndine Jira Workspace](https://vuxducgiang.atlassian.net/?continue=https%3A%2F%2Fvuxducgiang.atlassian.net%2Fwelcome%2Fsoftware%3FprojectId%3D10000&atlOrigin=eyJpIjoiY2E3M2MzNjViZGVmNDBiNGIzYjZlZDZhMmE5NmU1YjQiLCJwIjoiamlyYS1zb2Z0d2FyZSJ9)
 ```
