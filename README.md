@@ -89,6 +89,18 @@ Chatbot AI hỗ trợ phân tích dữ liệu vận hành, khung giờ cao đi�
 
 ---
 
+# Research-Based Learning (RBL)
+
+Dự án **CrownDine** được phát triển ứng dụng phương pháp **Research-Based Learning (RBL)**. Nhóm đã tiến hành nghiên cứu và phân tích các bài báo khoa học quốc tế (nằm trong thư mục [Articles](file:///E:/FPT_University/SUMMER2026/SWD392/research-by-learning-project-swd392_group3/Articles)) liên quan đến:
+- Tối ưu hóa doanh thu và dự đoán lượng khách hàng.
+- Phân tích đánh giá, phản hồi của người dùng (Sentiment Analysis).
+- Ứng dụng hệ thống gợi ý thực đơn thông minh (Recommender System).
+- Quản trị vận hành thời gian thực và tự động hóa quy trình bếp.
+
+Các kết quả nghiên cứu lý thuyết này được hiện thực hóa trực tiếp vào hệ thống CrownDine thông qua các tính năng như AI Chatbot hỗ trợ quản trị, hệ thống hiển thị bếp KDS realtime và quản lý đặt bàn trực tuyến.
+
+---
+
 # Giấy Phép
 
 Dự án được phát hành theo giấy phép MIT License.
