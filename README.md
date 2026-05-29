@@ -4,6 +4,18 @@
 
 ---
 
+# Research-Based Learning (RBL)
+
+Dự án **CrownDine** được phát triển ứng dụng phương pháp **Research-Based Learning (RBL)**, chuyển hóa các kết quả nghiên cứu lý thuyết từ các bài báo khoa học liên quan (thư mục [Articles](file:///E:/FPT_University/SUMMER2026/SWD392/research-by-learning-project-swd392_group3/Articles)) thành các giải pháp kỹ thuật tối ưu:
+
+*   **Tối ưu hóa Phân bổ Bàn ăn:** Nghiên cứu giải thuật Quy hoạch tuyến tính số nguyên (ILP) và thuật toán Heuristic để tối ưu công suất ghế và tự động hóa ghép bàn.
+*   **Trợ lý AI phân tích (NL2SQL & RAG):** Ứng dụng Gemini AI kết hợp kỹ thuật sinh truy vấn cơ sở dữ liệu tự động nhằm tối ưu hóa việc phân tích và báo cáo doanh thu từ câu hỏi tự nhiên.
+*   **Dự báo Nhu cầu & Quản lý Kho:** Áp dụng mô hình chuỗi thời gian (Time-series) dự đoán lượng khách và số món ăn để tối ưu lượng nguyên liệu nhập kho, giảm lãng phí thực phẩm.
+*   **Điều phối Nhà bếp (KDS Scheduling):** Nghiên cứu các giải thuật lập lịch phân xưởng (Job Shop Scheduling như SPT, NEH) để tối ưu thứ tự nấu, giảm thời gian khách chờ và giữ thức ăn nóng đồng đều.
+*   **Hệ thống Gợi ý Thực đơn:** Ứng dụng luật kết hợp (Apriori) và lọc cộng tác (Collaborative Filtering) để đề xuất món ăn và thiết lập combo tự động theo hành vi người dùng.
+
+---
+
 # Tính Năng Chính
 
 ## Đặt Bàn Thông Minh
@@ -86,18 +98,6 @@ Chatbot AI hỗ trợ phân tích dữ liệu vận hành, khung giờ cao đi�
 - React Query
 - React Hook Form + Zod
 - Recharts
-
----
-
-# Research-Based Learning (RBL)
-
-Dự án **CrownDine** được phát triển ứng dụng phương pháp **Research-Based Learning (RBL)**. Nhóm đã tiến hành nghiên cứu và phân tích các bài báo khoa học quốc tế (nằm trong thư mục [Articles](file:///E:/FPT_University/SUMMER2026/SWD392/research-by-learning-project-swd392_group3/Articles)) liên quan đến:
-- Tối ưu hóa doanh thu và dự đoán lượng khách hàng.
-- Phân tích đánh giá, phản hồi của người dùng (Sentiment Analysis).
-- Ứng dụng hệ thống gợi ý thực đơn thông minh (Recommender System).
-- Quản trị vận hành thời gian thực và tự động hóa quy trình bếp.
-
-Các kết quả nghiên cứu lý thuyết này được hiện thực hóa trực tiếp vào hệ thống CrownDine thông qua các tính năng như AI Chatbot hỗ trợ quản trị, hệ thống hiển thị bếp KDS realtime và quản lý đặt bàn trực tuyến.
 
 ---
 
