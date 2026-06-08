@@ -1,0 +1,60 @@
+Nghiên cứu Hành vi Người dùng và Tương tác AI trên Hệ thống CrownDine
+1. Phân tích Tâm lý Kiểm soát và Cơ chế Ra quyết định Nhóm
+Dưới góc độ Kiến trúc sư Giải pháp AI, việc thiết kế hệ thống MyFoodGRS trên CrownDine không chỉ đơn thuần là giải quyết bài toán gợi ý, mà là tối ưu hóa quy trình ra quyết định trong bối cảnh "Người tổ chức" (Organizer) phải đối mặt với Cognitive Load (Tải trọng nhận thức) và Decision Fatigue (Sự mệt mỏi khi ra quyết định) cực lớn.
+Người tổ chức đóng vai trò là thực thể duy nhất tương tác với hệ thống để điều hướng lựa chọn cho cả nhóm. Để giảm thiểu áp lực tâm lý này, hệ thống hỗ trợ 03 nhiệm vụ cốt lõi:
+Gợi nhớ hoặc dự đoán sở thích (Recalling/Anticipating): Sử dụng dữ liệu nhân khẩu học (tuổi, giới tính, quốc tịch) để đưa ra các dự đoán hợp lý về nhu cầu ẩn của thành viên.
+Hòa giải các sở thích xung đột (Reconciling): Xử lý các yêu cầu trái ngược nhau để đạt được sự đồng thuận cao nhất.
+Xác định món ăn phù hợp (Identification of suitable dishes): Đảm bảo tính khả thi của thực đơn đối với từng cá nhân thông qua việc đối soát danh mục món ăn.
+Nhằm giảm nỗ lực lập bản đồ tư duy giữa các thành viên và sở thích, CrownDine sử dụng hệ thống Color-coding (Mã hóa màu sắc) đồng bộ trên giao diện (ví dụ: Frank được định danh bằng màu đỏ, mọi sở thích liên quan đến Frank sẽ hiển thị viền đỏ).
+Cơ chế xếp hạng được vận hành bởi Average Aggregation Strategy (Chiến lược gộp trung bình). Điểm hài lòng dự đoán sr,u của người dùng u đối với nhà hàng r được xác định bởi: sr,u = max(pu​∘pu​⋅qr​) 
+Trong đó: pr là profile nhà hàng, pu là profile người dùng, và qr là điểm chất lượng (TripAdvisor rating). Điểm số cuối cùng của nhóm là trung bình cộng của các giá trị sr,u này.
+2. Hiệu ứng Cú hích Kỹ thuật số (Digital Nudging) và Quản lý Sở thích Xung đột
+Hệ thống CrownDine áp dụng các thuật toán AI để thực hiện "cú hích", giúp người tổ chức mở rộng không gian tìm kiếm (expand the search space) khi gặp phải các rào cản về sở thích không tương thích.
+Chúng tôi ứng dụng thuật toán fpgrowth để khai thác các quy tắc kết hợp (association rules). Khi xảy ra xung đột (ví dụ: một thành viên thích Pizza, người khác thích Cá, nhưng không có nhà hàng nào phục vụ cả hai), hệ thống sẽ gợi ý các "thị hiếu thay thế" dựa trên mẫu hành vi phổ biến (ví dụ: người thích Pizza thường chấp nhận Pasta như một phương án có độ phù hợp cao).
+Ngoài ra, hệ thống tích hợp Collaborative Based Ranking, sử dụng độ tương đồng Jaccard với ngưỡng (threshold) là 0.6 để lọc ra các nhóm người dùng tương tự trong quá khứ, từ đó đề xuất các nhà hàng đã mang lại sự hài lòng thực tế cho các nhóm có cấu trúc tương đương.
+Bảng so sánh các biến thể hệ thống và tác động đến hiệu quả lựa chọn:
+Biến thể
+Mô tả chức năng
+Individual Loss (Mất mát cá nhân)
+Group Score (Điểm số nhóm)
+VN
+Không hỗ trợ (Cơ bản)
+1.24
+3.78
+VR
+Chỉ hỗ trợ gợi nhớ sở thích
+1.33
+3.67
+VI
+Chỉ hỗ trợ xử lý xung đột
+0.98
+3.78
+VRI
+Kết hợp R và I
+0.88 (Thấp nhất)
+4.10 (Cao nhất)
+Kết luận thực nghiệm: Việc kết hợp cả hai cơ chế hỗ trợ (VRI) giúp tối ưu hóa Menu-Preference Alignment, giảm thiểu tối đa sai số giữa mong muốn cá nhân và quyết định của nhóm.
+3. Tâm lý Chờ đợi và Tối ưu hóa Hiệu suất qua Hệ thống KDS
+Trong ngành Hospitality, quản trị sự hài lòng đồng nghĩa với việc quản trị kỳ vọng. Hệ thống KDS (Kitchen Display System) của CrownDine không chỉ là công cụ hiển thị đơn hàng, mà là mắt xích quan trọng để giảm Cognitive Load cho đội ngũ nhân viên bếp.
+Bằng cách khớp thông tin thực đơn với sở thích đã xác thực của khách hàng, KDS điều phối sản xuất dựa trên 10 danh mục thực phẩm cốt lõi: Pasta, Red Meat, Fish, Rice, Burger, Pizza, Salad, Soup, White Meat, và Chinese Noodle.
+Việc phân loại này cho phép KDS nhận diện sớm cấu trúc nhu cầu của nhóm khách ngay từ bước đặt bàn. Khi các món ăn được chuẩn bị dựa trên sự hiểu biết chính xác về sở thích (ví dụ: nhận diện nhóm có xu hướng thích đồ sống hoặc đồ nướng), thời gian chờ đợi được chuyển hóa từ tâm lý tiêu cực sang trạng thái chờ đợi trong sự tin tưởng, giúp nâng cao trải nghiệm tổng thể.
+4. Tương tác AI và Phân tích Phản hồi Đa kênh
+Để thấu hiểu hành vi khách hàng từ dữ liệu phi cấu trúc trên mạng xã hội (YouTube, Weibo), CrownDine đã thực hiện đối soát giữa các mô hình truyền thống và hiện đại.
+Hiệu quả phân tích: Mô hình LDA (Latent Dirichlet Allocation) chỉ đạt độ chính xác 58% và gặp khó khăn với các văn bản ngắn, nhiễu. Ngược lại, các mô hình ngôn ngữ lớn (LLM/GPT-3) đạt độ chính xác ấn tượng 97.7%.
+Xử lý dữ liệu nhiễu: Một điểm lưu ý quan trọng là mô hình LDA loại bỏ đến 42% dữ liệu vào danh mục "Other" do không thể phân loại, trong khi LLM chỉ phân loại 30% là "Other". Điều này chứng minh LLM có khả năng trích xuất giá trị từ các phản hồi ngắn và chứa nhiều từ lóng tốt hơn.
+Chủ đề trích xuất: AI có thể phân loại phản hồi thành các chủ đề tinh tế như: Sự ngưỡng mộ dịch vụ, Hoài niệm, Mong muốn trải nghiệm cuộc sống bản địa và Tác động của người có sức ảnh hưởng (Influencer).
+5. Roadmap Công nghệ Học sâu (Deep Learning) cho CrownDine
+Để chuẩn bị cho 30 năm tiếp theo của ngành du lịch, CrownDine đề xuất lộ trình ứng dụng Deep Learning (DL) tập trung vào tính khả thi:
+Convolutional Neural Network (CNN): Triển khai dưới dạng Edge Computing deployment để nhận diện khuôn mặt và sinh trắc học, phục vụ việc đăng ký an toàn tại biên giới và thanh toán bảo mật ngay tại bàn mà không cần tiếp xúc.
+Recurrent Neural Network (RNN): Ứng dụng trong việc phát triển các hướng dẫn viên ảo đa ngôn ngữ (Polylingual tour guiding) và hệ thống dịch thuật phổ quát, xóa bỏ rào cản ngôn ngữ cho thực khách quốc tế.
+Graph Neural Networks (GNN): Xử lý dữ liệu cấu trúc mạng từ dòng khách và hệ thống giao thông để dự báo mật độ khách du lịch, giúp nhà hàng tối ưu hóa nguồn lực theo thời gian thực.
+6. Kết luận 
+Sự thành công của CrownDine nằm ở việc thu hẹp khoảng cách giữa hình ảnh thương hiệu dự kiến (DMO) và hình ảnh thực tế được người dùng cảm nhận (UGC).
+Phân tích kỹ thuật chuyên sâu: Chúng tôi sử dụng Centred log-ratio vectors và Aitchison distance để đo lường mức độ không tương đồng giữa hình ảnh quảng bá và thực tế khách hàng chụp trên Instagram.
+Athens là điểm đến có sự đồng nhất cao nhất (Aitchison distance = 0.78).
+Paris và Rome cho thấy sự xung đột lớn nhất (lần lượt là 2.82 và 2.72), đòi hỏi sự điều chỉnh trong chiến lược định vị.
+Khuyến nghị chiến lược cho CrownDine:
+Tối ưu hóa nội dung theo khu vực: Cần tập trung mạnh vào các yếu tố "Gastronomy" (Ẩm thực) và "Shopping" (Mua sắm), vì đây là những thuộc tính UGC có ý nghĩa cao nhưng thường bị các chiến dịch DMO bỏ qua.
+Nâng cấp trải nghiệm thị giác: Tăng cường hình ảnh về bảo tàng và trải nghiệm ẩm thực thực tế để khớp với kỳ vọng của khách hàng.
+Tận dụng hình ảnh đường phố: Khách hàng đánh giá cao các cảnh quan đường phố và phương tiện công cộng (xe tram đỏ trắng), CrownDine nên tích hợp các yếu tố này vào giao diện gợi ý để tăng tính gợi hình.
+Giải thích thuật toán (Explainability): Luôn cung cấp lý do tại sao một nhà hàng được chọn (ví dụ: "Phù hợp với sở thích Pasta của Frank và Burger của Jim") để củng cố niềm tin và giảm áp lực cho người tổ chức.
