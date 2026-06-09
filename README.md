@@ -8,10 +8,6 @@
 
 Dự án **CrownDine** được phát triển ứng dụng phương pháp **Research-Based Learning (RBL)**, chuyển hóa các kết quả nghiên cứu lý thuyết từ các bài báo khoa học liên quan (thư mục [Articles](file:///E:/FPT_University/SUMMER2026/SWD392/research-by-learning-project-swd392_group3/Articles)) thành các giải pháp kỹ thuật tối ưu:
 
-*   **Tối ưu hóa Phân bổ Bàn ăn:** Nghiên cứu giải thuật Quy hoạch tuyến tính số nguyên (ILP) và thuật toán Heuristic để tối ưu công suất ghế và tự động hóa ghép bàn.
-*   **Trợ lý AI phân tích (NL2SQL & RAG):** Ứng dụng Gemini AI kết hợp kỹ thuật sinh truy vấn cơ sở dữ liệu tự động nhằm tối ưu hóa việc phân tích và báo cáo doanh thu từ câu hỏi tự nhiên.
-*   **Dự báo Nhu cầu & Quản lý Kho:** Áp dụng mô hình chuỗi thời gian (Time-series) dự đoán lượng khách và số món ăn để tối ưu lượng nguyên liệu nhập kho, giảm lãng phí thực phẩm.
-*   **Điều phối Nhà bếp (KDS Scheduling):** Nghiên cứu các giải thuật lập lịch phân xưởng (Job Shop Scheduling như SPT, NEH) để tối ưu thứ tự nấu, giảm thời gian khách chờ và giữ thức ăn nóng đồng đều.
 *   **Hệ thống Gợi ý Thực đơn:** Ứng dụng luật kết hợp (Apriori) và lọc cộng tác (Collaborative Filtering) để đề xuất món ăn và thiết lập combo tự động theo hành vi người dùng.
 
 ---
