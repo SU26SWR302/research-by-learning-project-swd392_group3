@@ -10,6 +10,8 @@ Dự án **CrownDine** được phát triển ứng dụng phương pháp **Rese
 
 *   **Hệ thống Gợi ý Thực đơn:** Ứng dụng luật kết hợp (Apriori) và lọc cộng tác (Collaborative Filtering) để đề xuất món ăn và thiết lập combo tự động theo hành vi người dùng.
 
+Link Overleaf : https://www.overleaf.com/read/vvfwghdzvnzh#2bd704
+Link Jira : https://vuxducgiang.atlassian.net/?continue=https%3A%2F%2Fvuxducgiang.atlassian.net%2Fwelcome%2Fsoftware%3FprojectId%3D10000&atlOrigin=eyJpIjoiYTNiOWMxYmNiOTExNGJjZmJiZjU3MGIzNGIyMDIyYzciLCJwIjoiamlyYS1zb2Z0d2FyZSJ9
 ---
 
 # Tính Năng Chính
