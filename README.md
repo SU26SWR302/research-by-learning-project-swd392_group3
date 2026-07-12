@@ -4,6 +4,16 @@
 
 ---
 
+# Research-Based Learning (RBL)
+
+Dự án **CrownDine** được phát triển ứng dụng phương pháp **Research-Based Learning (RBL)**, chuyển hóa các kết quả nghiên cứu lý thuyết từ các bài báo khoa học liên quan (thư mục [Articles](file:///E:/FPT_University/SUMMER2026/SWD392/research-by-learning-project-swd392_group3/Articles)) thành các giải pháp kỹ thuật tối ưu:
+
+*   **Hệ thống Gợi ý Thực đơn:** Ứng dụng luật kết hợp (Apriori) và lọc cộng tác (Collaborative Filtering) để đề xuất món ăn và thiết lập combo tự động theo hành vi người dùng.
+
+*   **Overleaf:** [Báo cáo/Tài liệu nghiên cứu](https://www.overleaf.com/read/vvfwghdzvnzh#2bd704)
+*   **Jira:** [Quản lý dự án CrownDine](https://vuxducgiang.atlassian.net/?continue=https%3A%2F%2Fvuxducgiang.atlassian.net%2Fwelcome%2Fsoftware%3FprojectId%3D10000&atlOrigin=eyJpIjoiYTNiOWMxYmNiOTExNGJjZmJiZjU3MGIzNGIyMDIyYzciLCJwIjoiamlyYS1zb2Z0d2FyZSJ9)
+---
+
 # Tính Năng Chính
 
 ## Đặt Bàn Thông Minh
@@ -86,18 +96,6 @@ Chatbot AI hỗ trợ phân tích dữ liệu vận hành, khung giờ cao đi�
 - React Query
 - React Hook Form + Zod
 - Recharts
-
----
-
-# Research-Based Learning (RBL)
-
-Dự án **CrownDine** được phát triển ứng dụng phương pháp **Research-Based Learning (RBL)**. Nhóm đã tiến hành nghiên cứu và phân tích các bài báo khoa học quốc tế (nằm trong thư mục [Articles](file:///E:/FPT_University/SUMMER2026/SWD392/research-by-learning-project-swd392_group3/Articles)) liên quan đến:
-- Tối ưu hóa doanh thu và dự đoán lượng khách hàng.
-- Phân tích đánh giá, phản hồi của người dùng (Sentiment Analysis).
-- Ứng dụng hệ thống gợi ý thực đơn thông minh (Recommender System).
-- Quản trị vận hành thời gian thực và tự động hóa quy trình bếp.
-
-Các kết quả nghiên cứu lý thuyết này được hiện thực hóa trực tiếp vào hệ thống CrownDine thông qua các tính năng như AI Chatbot hỗ trợ quản trị, hệ thống hiển thị bếp KDS realtime và quản lý đặt bàn trực tuyến.
 
 ---
 
